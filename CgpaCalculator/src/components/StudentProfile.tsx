@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { semester1, semester2, semester3, students } from "../data";
+import { semester1, semester2, semester3,semester4,semester5,semester6,semester7,semester8, students } from "../data";
 import { useParams } from "react-router-dom";
 import { CgpaRing } from './ResultCard';
 
@@ -76,6 +76,12 @@ function StudentProfile() {
   const subjects1 = semester1.find((s) => String(s.rollno) === rollno)?.subjects
   const subjects2 = semester2.find((s) => String(s.rollno) === rollno)?.subjects
   const subjects3 = semester3.find((s) => String(s.rollno) === rollno)?.subjects
+  const subjects4 = semester4.find((s) => String(s.rollno) === rollno)?.subjects
+  const subjects5 = semester5.find((s) => String(s.rollno) === rollno)?.subjects
+  const subjects6 = semester6.find((s) => String(s.rollno) === rollno)?.subjects
+  const subjects7 = semester7.find((s) => String(s.rollno) === rollno)?.subjects
+  const subjects8 = semester8.find((s) => String(s.rollno) === rollno)?.subjects
+
   // console.log("🚀 ~ StudentProfile ~ subjects3find:", subjects3)
  
   // console.log("🚀 ~ StudentProfile ~ subjects1:", subjects1)
@@ -94,10 +100,56 @@ function StudentProfile() {
   const { text: cgpaText2 } = getCgpaColor(cgpa2);
 
   
-    const totalCredits3 = subjects3 ? subjects3.reduce((s, sub) => s + sub.credits, 0): 0;
-    const earnedPoints3 = subjects3 ? subjects3.reduce((s, sub) => s + sub.credits * sub.gradePoint, 0): 0;
-    const cgpa3 = parseFloat((earnedPoints3 / totalCredits3).toFixed(2));
-    const { text: cgpaText3 } = getCgpaColor(cgpa3);
+  const totalCredits3 = subjects3 ? subjects3.reduce((s, sub) => s + sub.credits, 0): 0;
+  const earnedPoints3 = subjects3 ? subjects3.reduce((s, sub) => s + sub.credits * sub.gradePoint, 0): 0;
+  const cgpa3 = parseFloat((earnedPoints3 / totalCredits3).toFixed(2));
+  const { text: cgpaText3 } = getCgpaColor(cgpa3);
+
+  
+  const totalCredits4 = subjects4 ? subjects4.reduce((s, sub) => s + sub.credits, 0): 0;
+  const earnedPoints4 = subjects4 ? subjects4.reduce((s, sub) => s + sub.credits * sub.gradePoint, 0): 0;
+  const cgpa4 = parseFloat((earnedPoints4 / totalCredits4).toFixed(2));
+  const { text: cgpaText4 } = getCgpaColor(cgpa4);  
+
+  
+  const totalCredits5 = subjects5 ? subjects5.reduce((s, sub) => s + sub.credits, 0): 0;
+  const earnedPoints5 = subjects5 ? subjects5.reduce((s, sub) => s + sub.credits * sub.gradePoint, 0): 0;
+  const cgpa5 = parseFloat((earnedPoints5 / totalCredits5).toFixed(2));
+  const { text: cgpaText5 } = getCgpaColor(cgpa5);
+
+  
+  const totalCredits6 = subjects6 ? subjects6.reduce((s, sub) => s + sub.credits, 0): 0;
+  const earnedPoints6 = subjects6 ? subjects6.reduce((s, sub) => s + sub.credits * sub.gradePoint, 0): 0;
+  const cgpa6 = parseFloat((earnedPoints6 / totalCredits6).toFixed(2));
+  const { text: cgpaText6 } = getCgpaColor(cgpa6);
+
+  
+  const totalCredits7 = subjects7 ? subjects7.reduce((s, sub) => s + sub.credits, 0): 0;
+  const earnedPoints7 = subjects7 ? subjects7.reduce((s, sub) => s + sub.credits * sub.gradePoint, 0): 0;
+  const cgpa7 = parseFloat((earnedPoints7 / totalCredits7).toFixed(2));
+  const { text: cgpaText7 } = getCgpaColor(cgpa7);
+
+  
+  const totalCredits8 = subjects8 ? subjects8.reduce((s, sub) => s + sub.credits, 0): 0;
+  const earnedPoints8 = subjects8 ? subjects8.reduce((s, sub) => s + sub.credits * sub.gradePoint, 0): 0;
+  const cgpa8 = parseFloat((earnedPoints8 / totalCredits8).toFixed(2));
+  const { text: cgpaText8 } = getCgpaColor(cgpa8);
+
+
+  const subject1lenght = subjects1 ? subjects1.length : 0;
+  const subject2lenght = subjects2 ? subjects2.length : 0;
+  const subject3lenght = subjects3 ? subjects3.length : 0;
+  const subject4lenght = subjects4 ? subjects4.length : 0;
+  const subject5lenght = subjects5 ? subjects5.length : 0;
+  const subject6lenght = subjects6 ? subjects6.length : 0;
+  const subject7lenght = subjects7 ? subjects7.length : 0;
+  const subject8lenght = subjects8 ? subjects8.length : 0;
+
+  const totalCredits = totalCredits1 + totalCredits2 + totalCredits3 + totalCredits4 + totalCredits5 + totalCredits6 + totalCredits7 + totalCredits8;
+  const earnedPoints = earnedPoints1 + earnedPoints2 + earnedPoints3 + earnedPoints4 + earnedPoints5 + earnedPoints6 + earnedPoints7 + earnedPoints8;
+  const cgpa = parseFloat((earnedPoints / totalCredits).toFixed(2));
+  const subjectlength = subject1lenght + subject2lenght + subject3lenght + subject4lenght + subject5lenght + subject6lenght + subject7lenght + subject8lenght;
+  const { text: cgpaText } = getCgpaColor(cgpa);
     
   
   return (
@@ -221,7 +273,7 @@ function StudentProfile() {
 
     {/* semster 3 */}
     {subjects3 && <NavLink to = {`/student/${rollno}/semester3`}
-     className="px-6 py-6 mt-8 border-2flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-slate-800">
+     className="px-6 py-6 mt-8 border-2 flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-slate-800">
 
     {/* Left Side - Semester Info */}
     <div className="text-center sm:text-left">
@@ -261,6 +313,269 @@ function StudentProfile() {
 
     </NavLink>
 }
+
+  {/* semester 4 */}
+
+  {subjects4 && <NavLink to = {`/student/${rollno}/semester4`}
+     className="px-6 py-6 mt-8 border-2 flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-slate-800">
+
+    {/* Left Side - Semester Info */}
+    <div className="text-center sm:text-left">
+
+      <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase mb-3">
+        Semester Report
+      </div>
+
+      <h2 className="text-white text-xl font-bold tracking-tight">
+        {"semester 4".toUpperCase()}
+      </h2>
+
+      <p className="text-slate-500 text-sm mt-1">
+        Academic Performance Summary
+      </p>
+
+    </div>
+    <div className="flex-1 grid grid-cols-2 gap-3 w-full">
+              {[
+                { label: "Total Credits", value: String(totalCredits4), suffix: "Cr"  },
+                { label: "Grade Points",  value: String(earnedPoints4), suffix: "pts" },
+                { label: "Subjects",      value: String(subjects4.length), suffix: "" },
+                { label: "CGPA",          value: cgpa4.toFixed(2),      suffix: ""    },
+              ].map(({ label, value, suffix }) => (
+                <div key={label} className="bg-slate-800/50 border border-slate-800 rounded-xl p-3">
+                  <p className="text-slate-500 text-[10px] uppercase tracking-widest mb-1">{label}</p>
+                  <p className={`text-xl font-bold font-mono ${label === "CGPA" ? cgpaText4 : "text-white"}`}>
+                    {value}
+                    {suffix && <span className="text-xs text-slate-500 font-normal ml-1">{suffix}</span>}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+    {/* Right Side - CGPA Ring */}
+      <CgpaRing cgpa={cgpa4} />
+
+    </NavLink>
+}
+
+    {/* semester 5  */}
+
+    {subjects5 && <NavLink to = {`/student/${rollno}/semester5`}
+     className="px-6 py-6 mt-8 border-2 flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-slate-800">
+
+    {/* Left Side - Semester Info */}
+    <div className="text-center sm:text-left">
+
+      <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase mb-3">
+        Semester Report
+      </div>
+
+      <h2 className="text-white text-xl font-bold tracking-tight">
+        {"semester 5".toUpperCase()}
+      </h2>
+
+      <p className="text-slate-500 text-sm mt-1">
+        Academic Performance Summary
+      </p>    
+
+    </div>
+    <div className="flex-1 grid grid-cols-2 gap-3 w-full">
+              {[
+                { label: "Total Credits", value: String(totalCredits5), suffix: "Cr"  },
+                { label: "Grade Points",  value: String(earnedPoints5), suffix: "pts" },
+                { label: "Subjects",      value: String(subjects5.length), suffix: "" },
+                { label: "CGPA",          value: cgpa5.toFixed(2),      suffix: ""    },
+              ].map(({ label, value, suffix }) => (
+                <div key={label} className="bg-slate-800/50 border border-slate-800 rounded-xl p-3">
+                  <p className="text-slate-500 text-[10px] uppercase tracking-widest mb-1">{label}</p>
+                  <p className={`text-xl font-bold font-mono ${label === "CGPA" ? cgpaText5 : "text-white"}`}>
+                    {value}
+                    {suffix && <span className="text-xs text-slate-500 font-normal ml-1">{suffix}</span>}
+                  </p>
+                </div>
+              ))}
+            </div> 
+
+    {/* Right Side - CGPA Ring */}
+      <CgpaRing cgpa={cgpa5} />
+
+    </NavLink>
+}
+
+    {/* semester 6 */}
+
+    {subjects6 && <NavLink to = {`/student/${rollno}/semester6`}
+     className="px-6 py-6 mt-8 border-2 flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-slate-800">
+
+    {/* Left Side - Semester Info */}
+    <div className="text-center sm:text-left">
+
+      <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase mb-3">
+        Semester Report
+      </div>
+
+      <h2 className="text-white text-xl font-bold tracking-tight">
+        {"semester 6".toUpperCase()}
+      </h2>
+
+      <p className="text-slate-500 text-sm mt-1">
+        Academic Performance Summary
+      </p>    
+
+    </div>
+    <div className="flex-1 grid grid-cols-2 gap-3 w-full">
+              {[
+                { label: "Total Credits", value: String(totalCredits6), suffix: "Cr"  },
+                { label: "Grade Points",  value: String(earnedPoints6), suffix: "pts" },
+                { label: "Subjects",      value: String(subjects6.length), suffix: "" },
+                { label: "CGPA",          value: cgpa6.toFixed(2),      suffix: ""    },
+              ].map(({ label, value, suffix }) => (
+                <div key={label} className="bg-slate-800/50 border border-slate-800 rounded-xl p-3">
+                  <p className="text-slate-500 text-[10px] uppercase tracking-widest mb-1">{label}</p>
+                  <p className={`text-xl font-bold font-mono ${label === "CGPA" ? cgpaText6 : "text-white"}`}>
+                    {value}
+                    {suffix && <span className="text-xs text-slate-500 font-normal ml-1">{suffix}</span>}
+                  </p>
+                </div>
+              ))}
+            </div> 
+
+    {/* Right Side - CGPA Ring */}
+      <CgpaRing cgpa={cgpa6} />
+
+    </NavLink>
+}
+
+    {/* semester 7 */}
+
+    {subjects7 && <NavLink to = {`/student/${rollno}/semester7`}
+     className="px-6 py-6 mt-8 border-2 flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-slate-800">
+
+    {/* Left Side - Semester Info */}
+    <div className="text-center sm:text-left">
+
+      <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase mb-3">
+        Semester Report
+      </div>
+
+      <h2 className="text-white text-xl font-bold tracking-tight">
+        {"semester 7".toUpperCase()}
+      </h2>
+
+      <p className="text-slate-500 text-sm mt-1">
+        Academic Performance Summary
+      </p>    
+
+    </div>
+    <div className="flex-1 grid grid-cols-2 gap-3 w-full">
+              {[
+                { label: "Total Credits", value: String(totalCredits7), suffix: "Cr"  },
+                { label: "Grade Points",  value: String(earnedPoints7), suffix: "pts" },
+                { label: "Subjects",      value: String(subjects7.length), suffix: "" },
+                { label: "CGPA",          value: cgpa7.toFixed(2),      suffix: ""    },
+              ].map(({ label, value, suffix }) => (
+                <div key={label} className="bg-slate-800/50 border border-slate-800 rounded-xl p-3">
+                  <p className="text-slate-500 text-[10px] uppercase tracking-widest mb-1">{label}</p>
+                  <p className={`text-xl font-bold font-mono ${label === "CGPA" ? cgpaText7 : "text-white"}`}>
+                    {value}
+                    {suffix && <span className="text-xs text-slate-500 font-normal ml-1">{suffix}</span>}
+                  </p>
+                </div>
+              ))}
+            </div> 
+
+    {/* Right Side - CGPA Ring */}
+      <CgpaRing cgpa={cgpa7} />
+
+    </NavLink>
+} 
+
+    {/* semester 8 */}
+
+    {subjects8 && <NavLink to = {`/student/${rollno}/semester8`}
+     className="px-6 py-6 mt-8 border-2 flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-slate-800">
+
+    {/* Left Side - Semester Info */}
+    <div className="text-center sm:text-left">
+
+      <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase mb-3">
+        Semester Report
+      </div>
+
+      <h2 className="text-white text-xl font-bold tracking-tight">
+        {"semester 8".toUpperCase()}
+      </h2> 
+
+      <p className="text-slate-500 text-sm mt-1">
+        Academic Performance Summary
+      </p>    
+
+    </div>
+    <div className="flex-1 grid grid-cols-2 gap-3 w-full">
+              {[
+                { label: "Total Credits", value: String(totalCredits8), suffix: "Cr"  },
+                { label: "Grade Points",  value: String(earnedPoints8), suffix: "pts" },
+                { label: "Subjects",      value: String(subjects8.length), suffix: "" },
+                { label: "CGPA",          value: cgpa8.toFixed(2),      suffix: ""    },
+              ].map(({ label, value, suffix }) => (
+                <div key={label} className="bg-slate-800/50 border border-slate-800 rounded-xl p-3">
+                  <p className="text-slate-500 text-[10px] uppercase tracking-widest mb-1">{label}</p>
+                  <p className={`text-xl font-bold font-mono ${label === "CGPA" ? cgpaText8 : "text-white"}`}>
+                    {value}
+                    {suffix && <span className="text-xs text-slate-500 font-normal ml-1">{suffix}</span>}
+                  </p>
+                </div>
+              ))}
+            </div> 
+
+    {/* Right Side - CGPA Ring */}
+      <CgpaRing cgpa={cgpa8} />
+
+    </NavLink>
+}
+
+    {/* scgpa */}
+
+     <div
+     className="px-6 py-6 mt-8 border-2 border-amber-500 flex flex-col sm:flex-row items-center justify-between gap-8 border-b rouonded-md">
+
+    {/* Left Side - Semester Info */}
+    <div className="text-center sm:text-left">
+
+      <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase mb-3">
+        Total Report
+      </div>
+
+      <h2 className="text-white text-xl font-bold tracking-tight">
+        {"Final".toUpperCase()}
+      </h2> 
+
+      <p className="text-slate-500 text-sm mt-1">
+        Academic Performance Summary
+      </p>    
+
+    </div>
+    <div className="flex-1 grid grid-cols-2 gap-3 w-full">
+              {[
+                { label: "Total Credits", value: String(totalCredits), suffix: "Cr"  },
+                { label: "Grade Points",  value: String(earnedPoints), suffix: "pts" },
+                { label: "Subjects",      value: String(subjectlength), suffix: "" },
+                { label: "CGPA",          value: cgpa.toFixed(2),      suffix: ""    },
+              ].map(({ label, value, suffix }) => (
+                <div key={label} className="bg-slate-800/50 border border-slate-800 rounded-xl p-3">
+                  <p className="text-slate-500 text-[10px] uppercase tracking-widest mb-1">{label}</p>
+                  <p className={`text-xl font-bold font-mono ${label === "CGPA" ? cgpaText : "text-white"}`}>
+                    {value}
+                    {suffix && <span className="text-xs text-slate-500 font-normal ml-1">{suffix}</span>}
+                  </p>
+                </div>
+              ))}
+            </div> 
+
+    {/* Right Side - CGPA Ring */}
+      <CgpaRing cgpa={cgpa} />
+
+    </div>
     
 
     </>

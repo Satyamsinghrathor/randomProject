@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { semester1, semester2, semester3, students } from "../data";
+import { semester1, semester2, semester3, semester4, semester5, semester6, semester7, semester8, students } from "../data";
 import { useReactToPrint } from "react-to-print";
 
 const gradeStyles: Record<string, string> = {
@@ -82,6 +82,16 @@ export default function ResultCard() {
       sem = semester2.find((item) => item.rollno === rollno);
     } else if (semester === "semester1") {
       sem = semester1.find((item) => item.rollno === rollno);
+    } else if (semester === "semester4") {
+      sem = semester4.find((item) => item.rollno === rollno);
+    } else if (semester === "semester5") {
+      sem = semester5.find((item) => item.rollno === rollno);
+    } else if (semester === "semester6") {
+      sem = semester6.find((item) => item.rollno === rollno);
+    } else if (semester === "semester7") {
+      sem = semester7.find((item) => item.rollno === rollno);
+    } else if (semester === "semester8") {
+      sem = semester8.find((item) => item.rollno === rollno);
     }
 
     setStudent(foundStudent[0] || null);

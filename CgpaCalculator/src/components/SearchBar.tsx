@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-type Semester = "semester1" | "semester2" | "semester3" | "semester4";
+type Semester = "semester1" | "semester2" | "semester3" | "semester4" | "semester5" | "semester6" | "semester7" | "semester8";
 
 const SEMESTER_LABELS: Record<Semester, string> = {
   semester1: "Semester 1",
   semester2: "Semester 2",
   semester3: "Semester 3",
   semester4: "Semester 4",
+  semester5: "Semester 5",
+  semester6: "Semester 6",
+  semester7: "Semester 7",
+  semester8: "Semester 8",
 };
 
 export default function SearchBar() {
