@@ -36,12 +36,15 @@ export default function About() {
           </p>
 
           <ul className="list-disc list-inside text-slate-400 space-y-2">
+            <li>for all semeter visit student page </li>
             <li>Subject-wise marks and grades</li>
             <li>Total credits earned</li>
             <li>Grade points calculation</li>
             <li>Semester CGPA classification</li>
             <li>Downloadable PDF result sheet</li>
+            <li>if anyone data is <label className="text-red-500">mismatch</label> please <label className="text-green-500">pull request</label> on github url </li>
             <li className=" text-red-600">NOTE: it is only for CSE A and B </li>
+            <li>if any other branch want they can download zip file and change data according to their branch</li>
           </ul>
 
           <p>
@@ -49,7 +52,7 @@ export default function About() {
             className="text-green-500 hover:text-red-600 "
             > GITHUB </Link>
           </p>
-
+          <p><label className="font-bold text-green-400"> Suggestion: </label>if you are changing data make sure it is of same format as provided in github</p>
           <p>
             This system is built using:
           </p>
