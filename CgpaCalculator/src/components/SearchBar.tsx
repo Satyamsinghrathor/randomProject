@@ -182,7 +182,7 @@ export default function SearchBar() {
         <p className="text-center flex align-middle justify-center items-center text-slate-700 text-xs mt-5 font-mono">
           <label className="text-xl text-red-500">NOTE: </label>
           <label className="text-red-500">
-            this is not official might have ,ERROR
+            this is not official result, it might have ,ERROR(s)
           </label>
         </p>
 

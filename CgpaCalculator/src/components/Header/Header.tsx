@@ -52,6 +52,19 @@ export default function Header() {
             Student
           </NavLink>
 
+          <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `px-4 py-2 rounded-xl text-sm font-mono transition-all duration-200 ${
+                    isActive
+                      ? "bg-sky-500/15 text-sky-400 border border-sky-500/30"
+                      : "text-slate-400 hover:text-white hover:bg-slate-800"
+                  }`
+                }
+              >
+                About
+            </NavLink>
+
         </nav>
       </div>
     </header>

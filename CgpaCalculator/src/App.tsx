@@ -4,6 +4,7 @@ import ResultCard from "./components/ResultCard";
 import Header from "./components/Header/Header";
 import Student from "./components/student/Student";
 import StudentProfile from "./components/StudentProfile";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/student" element={<Student />} />
           <Route path="/student/:rollno" element={<StudentProfile />} />
           <Route path="/student/:rollno/:semester" element={<ResultCard />} />
+          <Route path="/about" element={<About/>} />
         </Routes>
 
       </div>
