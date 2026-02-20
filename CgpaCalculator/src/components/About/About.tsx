@@ -72,7 +72,7 @@ export default function About() {
 
         {/* Footer */}
         <div className="mt-8 border-t border-slate-800 pt-4 text-center text-slate-600 text-xs font-mono">
-          Developed for Academic Use · © 2024-2028 CSE
+          Developed for <Link to= "https://github.com/Satyamsinghrathor"> Satyam Singh </Link> · © 2024-2028 CSE
         </div>
 
       </div>
