@@ -116,7 +116,7 @@ export default function ResultCard() {
     <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
       <div className="w-full max-w-2xl">
 
-        {/* ✅ Print button OUTSIDE the ref — won't appear in print */}
+        
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 bg-slate-800/60 border border-slate-700 rounded-full px-4 py-1.5 mb-3">
             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -137,7 +137,7 @@ export default function ResultCard() {
           </button>
         </div>
 
-        {/* ✅ resultRef wraps the FULL card — this is what gets printed */}
+        
         <div ref={resultRef} className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl shadow-black/60">
 
           {/* Student Info */}
@@ -242,3 +242,7 @@ export default function ResultCard() {
     </div>
   );
 }
+
+
+
+export {CgpaRing }
