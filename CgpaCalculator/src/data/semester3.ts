@@ -409,9 +409,9 @@ const semester3 = [
     rollno: "2401107031",
     subjects: [
       { code: "GEUV104", name: "Universal Human Values", credits: 1, grade: "O", gradePoint: 10 },
-      { code: "CSUC105", name: "Operating Systems", credits: 3, grade: "A+", gradePoint: 9 },
+      { code: "CSUC105", name: "Operating Systems", credits: 3, grade: "A", gradePoint: 9 },
       { code: "CSUC106", name: "Data Structures", credits: 4, grade: "A+", gradePoint: 9 },
-      { code: "CSUC107", name: "Python Programming", credits: 3, grade: "A+", gradePoint: 9 },
+      { code: "CSUC107", name: "Python Programming", credits: 3, grade: "A", gradePoint: 9 },
       { code: "ECUC130", name: "Fundamentals of VLSI System", credits: 4, grade: "A+", gradePoint: 9 },
       { code: "ECUC131", name: "VLSI System Laboratory", credits: 1.5, grade: "O", gradePoint: 10 },
       { code: "CSUC108", name: "Operating Systems Laboratory", credits: 1.5, grade: "O", gradePoint: 10 },
